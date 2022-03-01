@@ -11,11 +11,16 @@ import {
 } from '@ionic/react';
 import React, {useState} from 'react';
 
+import { useLocalStorage } from './hooks';
+
 import BiorhythmCard from './components/BiorhythmCard';
 
 function App() {
-  const [name, setName] = useState('');
-  const [birthDate, setBirthDate] = useState('');
+  const [name, setName] = useLocalStorage('name', 'Sabi');
+  const [birthDate, setBirthDate] = useLocalStorage(
+    'birth date' , new Date('1990-01-01').toISOString()
+  );
+  const [targetDate, setTargetDate] = useState(new Date().toISOString());
   return (
     <IonApp>
       <IonHeader>
@@ -31,11 +36,24 @@ function App() {
           <IonItem>
             <IonLabel position='stacked'>Date of Birth</IonLabel>
             <IonDatetime
+              value = {birthDate}
               displayFormat='DD MMM YYYY'
               onIonChange={(event) => setBirthDate(event.detail.value)}
             />
           </IonItem>
-          <BiorhythmCard targetName={name} targetDate={birthDate}/>
+          <IonItem>
+            <IonLabel position='stacked'>Traget Date</IonLabel>
+            <IonDatetime
+              value = {targetDate}
+              displayFormat='DD MMM YYYY'
+              onIonChange={(event) => setTargetDate(event.detail.value)}
+            />
+          </IonItem>
+          <BiorhythmCard
+            targetName={name}
+            birthDate={birthDate}
+            targetDate={targetDate}
+          />
       </IonContent>
     </IonApp>
   );
