@@ -2,9 +2,20 @@
 
 Calculates biorhythm based on date of birth.
 
+### Install dependencies
+    npm install
+
+### Run locally
+    npm run
+
 ### Run tests
     npm test
 
+### Create production build
+    npm run build
+
+### Server the build folder
+    npx serve -s build
 
 ## Links
 

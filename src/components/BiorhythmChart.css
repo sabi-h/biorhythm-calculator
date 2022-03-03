@@ -1,0 +1,11 @@
+.biorhythm-chart .physical path {
+    stroke: var(--app-physical-color);
+}
+
+.biorhythm-chart .emotional path {
+    stroke: var(--app-emotional-color);
+}
+
+.biorhythm-chart .intellectual path {
+    stroke: var(--app-intellectual-color);
+}
