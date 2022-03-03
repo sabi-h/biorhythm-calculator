@@ -1,6 +1,8 @@
 # Biorhythm Calculator
-Calculates biorhythm based on date of birth.
-https://dasx-biorhythm.netlify.app/
+Calculates biorhythm based on date of birth:
+
+<a href="https://dasx-biorhythm.netlify.app/" target="_blank">https://dasx-biorhythm.netlify.app/</a>
+
 
 ### Install dependencies
     npm install
