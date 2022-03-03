@@ -1,10 +1,7 @@
 # Biorhythm Calculator
 Calculates biorhythm based on date of birth: https://dasx-biorhythm.netlify.app/
 
-Uses ionic framework.
-
-### Framework used
-React Ionic
+Built using ionic framework.
 
 ### Install dependencies
     npm install
